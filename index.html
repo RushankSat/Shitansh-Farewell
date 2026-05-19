@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages for Shitansh ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-snap-type:y mandatory;
+      scroll-behavior:smooth;
+      overflow-y:scroll;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      color:white;
+    }
+
+    section{
+      height:100vh;
+      width:100%;
+      scroll-snap-align:start;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Background Themes */
+
+    .bg1{
+      background:linear-gradient(135deg,#667eea,#764ba2);
+    }
+
+    .bg2{
+      background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    }
+
+    .bg3{
+      background:linear-gradient(135deg,#43cea2,#185a9d);
+    }
+
+    .bg4{
+      background:linear-gradient(135deg,#f7971e,#ffd200);
+    }
+
+    .bg5{
+      background:linear-gradient(135deg,#fc466b,#3f5efb);
+    }
+
+    /* Floating Shapes */
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.1);
+      animation:float 6s infinite ease-in-out;
+    }
+
+    .circle1{
+      width:180px;
+      height:180px;
+      top:-40px;
+      left:-40px;
+    }
+
+    .circle2{
+      width:120px;
+      height:120px;
+      bottom:30px;
+      right:20px;
+      animation-delay:2s;
+    }
+
+    .circle3{
+      width:70px;
+      height:70px;
+      bottom:120px;
+      left:40px;
+      animation-delay:1s;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* Card */
+
+    .card{
+      width:100%;
+      max-width:430px;
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter:blur(14px);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.25);
+      z-index:2;
+      animation:fadeUp 0.8s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    h1{
+      text-align:center;
+      font-size:2rem;
+      margin-bottom:8px;
+      font-weight:700;
+    }
+
+    .subtitle{
+      text-align:center;
+      font-size:0.95rem;
+      opacity:0.9;
+      margin-bottom:25px;
+    }
+
+    /* Sender Box */
+
+    .sender-card{
+      background:rgba(255,255,255,0.14);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:18px;
+      padding:14px;
+      text-align:center;
+      margin-bottom:25px;
+      backdrop-filter:blur(8px);
+    }
+
+    .sender-label{
+      font-size:0.75rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      opacity:0.8;
+      margin-bottom:5px;
+    }
+
+    .employee-name{
+      font-size:1.4rem;
+      font-weight:700;
+    }
+
+    /* Message */
+
+    .message{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .line{
+      display:flex;
+      align-items:center;
+      background:rgba(255,255,255,0.12);
+      padding:12px 15px;
+      border-radius:14px;
+      transition:0.3s;
+    }
+
+    .line:hover{
+      transform:scale(1.03);
+      background:rgba(255,255,255,0.18);
+    }
+
+    .letter{
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      background:white;
+      color:#333;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      margin-right:15px;
+      flex-shrink:0;
+    }
+
+    .word{
+      font-size:1rem;
+      font-weight:500;
+    }
+
+    /* Scroll Text */
+
+    .scroll{
+      position:fixed;
+      bottom:18px;
+      width:100%;
+      text-align:center;
+      font-size:0.9rem;
+      opacity:0.9;
+      z-index:99;
+      animation:bounce 1.8s infinite;
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-6px);
+      }
+    }
+
+    /* Mobile */
+
+    @media(max-width:480px){
+
+      .card{
+        padding:24px;
+      }
+
+      h1{
+        font-size:1.7rem;
+      }
+
+      .employee-name{
+        font-size:1.2rem;
+      }
+
+      .line{
+        padding:10px 12px;
+      }
+
+      .word{
+        font-size:0.95rem;
+      }
+
+      .letter{
+        width:34px;
+        height:34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Employee 1 -->
+
+  <section class="bg1">
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+    <div class="card">
+
+      <h1>For Shitansh ✨</h1>
+      <div class="subtitle">A wall of words from the team</div>
+
+      <div class="sender-card">
+        <div class="sender-label">Message From</div>
+        <div class="employee-name">Rushank</div>
+      </div>
+
+      <div class="message">
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Super</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Heroic</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">I</div>
+          <div class="word">Inspiring</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">T</div>
+          <div class="word">Talented</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">A</div>
+          <div class="word">Amazing</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">N</div>
+          <div class="word">Nice</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Smart</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Humble</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Employee 2 -->
+
+  <section class="bg2">
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <div class="card">
+
+      <h1>For Shitansh ✨</h1>
+      <div class="subtitle">A wall of words from the team</div>
+
+      <div class="sender-card">
+        <div class="sender-label">Message From</div>
+        <div class="employee-name">Priya</div>
+      </div>
+
+      <div class="message">
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Supportive</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Helpful</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">I</div>
+          <div class="word">Intelligent</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">T</div>
+          <div class="word">Trustworthy</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">A</div>
+          <div class="word">Admirable</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">N</div>
+          <div class="word">Noble</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Strong</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Hardworking</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Employee 3 -->
+
+  <section class="bg3">
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <div class="card">
+
+      <h1>For Shitansh ✨</h1>
+      <div class="subtitle">A wall of words from the team</div>
+
+      <div class="sender-card">
+        <div class="sender-label">Message From</div>
+        <div class="employee-name">Rahul</div>
+      </div>
+
+      <div class="message">
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Spectacular</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Honest</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">I</div>
+          <div class="word">Innovative</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">T</div>
+          <div class="word">Terrific</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">A</div>
+          <div class="word">Awesome</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">N</div>
+          <div class="word">Natural Leader</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">S</div>
+          <div class="word">Skilled</div>
+        </div>
+
+        <div class="line">
+          <div class="letter">H</div>
+          <div class="word">Humorous</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Scroll Indicator -->
+
+  <div class="scroll">
+    ↓ Scroll to see more messages ↓
+  </div>
+
+</body>
+</html>
