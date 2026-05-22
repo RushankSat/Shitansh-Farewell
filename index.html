@@ -29,7 +29,7 @@
     section{
       height:100vh;
       width:100%;
-      scroll-snap-align:start;
+      -snap-align:start;
       display:flex;
       justify-content:center;
       align-items:center;
@@ -661,12 +661,12 @@
 
   </section>
 
-  <!-- Scroll Indicator -->
+  <!-- Scroll Indicator 
 
   <div class="scroll">
     ↓ Scroll to see more messages ↓
   </div>
-   <!-- Employee 7  -->
+    Employee 7  -->
 
   <section class="bg3">
 
@@ -731,6 +731,25 @@
     </div>
 
   </section>
+<!-- Scroll Indicator -->
+<div class="scroll">
+  ↓ Scroll to see more messages ↓
+</div>
 
+<script>
+  const scrollText = document.querySelector('.scroll');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    const lastSection = sections[sections.length - 1];
+    const lastTop = lastSection.offsetTop;
+
+    if (window.scrollY >= lastTop - 100) {
+      scrollText.style.display = 'none';
+    } else {
+      scrollText.style.display = 'block';
+    }
+  });
+</script>
 </body>
 </html>
